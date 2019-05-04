@@ -5,15 +5,22 @@ import random
 import pyautogui
 
 def job():
+    #figure out what time it is and generate some random numbers
+    #wait is done in terms of seconds
     timeNow = datetime.datetime.now().strftime("%H:%M:%S")
     random_num_1 = random.uniform(3,10)
     random_num_2 = random.uniform(1,10)
-    #wait is done in terms of seconds
+
+    pyautogui.typewrite("Hey fam do my survey: https://bit.ly/2ZU0mfE"
     time.sleep(random_num_1)
-    pyautogui.typewrite("Hey cunt faces do my survey: https://bit.ly/2ZU0mfE\n")
+    pyautogui.typewrite("\n")
+    
+    
+    pyautogui.typewrite("Trying to figure out what to call my web app")
     time.sleep(random_num_2)
-    pyautogui.typewrite("Trying to figure out what to call my web app\n")
+    pyautogui.typewrite("\n")
     print("Completed: " + timeNow)
+
 
 
 schedule.every(1).minutes.do(job)
